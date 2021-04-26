@@ -1,0 +1,1 @@
+Nowy kurs: https://www.udemy.com/course/automate/

@@ -2,7 +2,18 @@
 """
 RE - wyrażenia regularne
 
-\d - cyfra
+klasy znaków - character classes
+\d - cyfra 0 - 9
+\D - wszystkie inne znaki
+\w - każda litera, cyfra lub "podkreślony znak"
+\W - każdy znak który nie jest literą, cyfrą lub "podkreślonym znakiem"
+\s - każda spacja, tab czy znak końca linii
+\S - każdy znak niebędący spacją, tab, czy końcem linii
+
+('[aeiouAEIOU]') - tworzenie własnej klasy samych samogłosek
+('^[aeiouAEIOU]') - ^ oznacza wszystko inne
+
+^ - carrot ;] tak sie po ang nazywa
 
 ? oznacza że coś jest opcjonalne czyli może 0 lub 1 raz wystąpić
 aby wyszukać ? używamy \?
@@ -17,6 +28,10 @@ dokłdnie ileś razy {x}
 {x,} - x lub więcej
 {x,y} - pomiędzy x a y - szuka maksymalnej możliwej ilości
 {x,y}? - pomiędzy x a y -  szuka minimalnej możliwej ilości
+
+search() wyrażenia regularnego szuka pierwszego zgodnego
+findall() wyrażenia regularnego szuka wszystkich trafień, np. wszystkie nr na stronie
+
 """
 
 

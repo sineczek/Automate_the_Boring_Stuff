@@ -12,8 +12,16 @@ klasy znaków - character classes
 
 ('[aeiouAEIOU]') - tworzenie własnej klasy samych samogłosek
 ('^[aeiouAEIOU]') - ^ oznacza wszystko inne
-
+    re.IGNORECASE lub re.I i nie trzeba pisać dużymi i małymi (jako 2 argument)
 ^ - carrot ;] tak sie po ang nazywa
+
+r'^Hello' - poszukuje ale tylko na początku
+r'hello$' - poszukuje ale tylko na końcu
+
+. - pojedynczy znak, prócz nowej linii
+    re.DOTALL pozwoli również nowe linie (jako 2 argument)
+.* - każdy ciąg, ('First Name: (.*) Last Name: (.*)')  -> tupa z imieniem i nazwiskiem
+.*? - minimalna ilośc zgadzająca się
 
 ? oznacza że coś jest opcjonalne czyli może 0 lub 1 raz wystąpić
 aby wyszukać ? używamy \?

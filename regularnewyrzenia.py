@@ -39,9 +39,25 @@ dokłdnie ileś razy {x}
 
 search() wyrażenia regularnego szuka pierwszego zgodnego
 findall() wyrażenia regularnego szuka wszystkich trafień, np. wszystkie nr na stronie
+sub() - zamienia (co, w czym), ale też można np. \1 czyli z grupy 1, \2 z gdupy 2 etc.
+
+
+re.VERBOSE - można wówczas podzielić txt na linie i dodawać komentarze
+np. re.compile(r'''
+(\d\d\d)|       # kierunkowy np. 012 lub
+(\d\d)          # samo 12
+\s              # spacja/przerwa
+(\d\d\d)        # pierwsze 3 cyfry
+(\s)|           # przerwa
+-               # - między
+(\d\d)          # 1 blok 2 cyfr
+(\s)|           # przerwa
+-               # - między
+(\d\d)          # 2 blok 2 cyfr
+''', re.VERBOSE | re.DOTALL | re.I) # | pozwala użyć więcej argumentów
+
 
 """
-
 
 
 

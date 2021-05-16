@@ -4,6 +4,8 @@ conn = imapclient.IMAPClient('imap.gmail.com', ssl=True)
 conn.login('login@gmail.com', 'password')
 
 conn.select_folder('INBOX', readonly=True)  # aby przypadkiem nie pokasować maili
+conn.list_folders() #lista tupli, 3ci to folder w skrzynce
+
 
 uids = conn.search(['SINCE 20-Aug-2020'])  # maile od 20 sierpnia 2020, zwraca UIDs maili
 
@@ -17,5 +19,11 @@ msg.text_part # czy była część w plaintexście, jak None to brak textu
 msg.html_part # czy ma część html
 
 msg.text_part.get_payload().decode('UTF-8') # i to daje dopiero treść maila
+
+# kasoeanie maili
+conn.select_folder('INBOX', readonly=False)
+uids = conn.search(['SINCE 20-Aug-2020'])
+conn.delete_messages(uidy)
+
 
 conn.logout() # zamknięcie połączenia

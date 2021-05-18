@@ -15,7 +15,7 @@ pyautogui.moveTo(10, 10) # "teleport" kursoro
 pyautogui.moveTo(1000, 500, duration=1.5) # powolniejszy ruch
 
 pyautogui.moveRel(200,0) # rusz kursor o 200px w prawo
-pyautogui.moveRel(200,-400) # - aby w górę"""
+pyautogui.moveRel(200,-400) # - aby w górę
 
 pyautogui.click(1415, 14)  # kliknij w napis Help (PyCharm na połowie ekranu)
 
@@ -27,3 +27,4 @@ pyautogui.middleClick()
 
 
 # gdyby coś nawaliło myszka na 0x0 aby przerwać
+"""
